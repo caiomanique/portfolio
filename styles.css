@@ -1,0 +1,108 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary-color:#10162f;
+    --secondary-color:#486989;
+    --accent-color:#FDB15D;
+    --text-color:#F1F1E6;
+}
+
+html{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+p{
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    margin: 1% 0;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+nav{
+    padding: 20px 0;
+    border-bottom: var(--accent-color) solid 1px;
+}
+
+nav ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-list li{
+    border: var(--accent-color) solid 1px;
+    padding: 0 10px;
+}
+
+main{
+    margin: auto;
+    max-width: 90%;
+}
+
+.welcome-section{
+    background-color: green;
+    min-height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3em;
+    background-color: greenyellow;
+}
+
+.project-image{
+    aspect-ratio: 16/9;
+    max-width: 400px;
+    object-fit:fill;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
