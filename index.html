@@ -1,84 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <title>Caio Manique</title>
+<!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- External CSS file -->
+  <link rel="stylesheet" href="styles.css">
+<!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<!-- Icons from Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<!-- Page title -->
+  <title>Caio Manique</title>
 </head>
 <body>
-    <header>
-        <nav id="navbar" class="nav">
-            <ul class="nav-list">
-              <li>
-                <a href="#welcome-section">About</a>
-              </li>
-              <li>
-                <a href="#projects">Work</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="welcome-section" class="welcome-section">
-            <h1>Lorem.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse dolorem voluptatibus praesentium, temporibus quam vel.</p>
-        </section>
-        <section id="projects" class="projects-section">
-            <h2 class="projects-section-header">These are some of my projects</h2>
-            <div class="projects-grid">
-              <a href="https://caiomanique.github.io/camera-product-landing-page/" target="_blank" class="project project-tile">
-                <img class="project-image" src="assets/camera-product-landing-page.png" alt="project">
-                <p class="project-title">
-                  Product Landing Page            
+<!-- Header section with navigation -->
+  <header>
+    <nav id="navbar" class="nav">
+<!-- Navigation links -->
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="#projects">Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<!-- Main content section -->
+  <main class="flow">
+<!-- Welcome section -->
+    <section id="welcome-section" class="welcome-section flow">
+<!-- Main heading -->
+      <h1>Lorem.</h1>
+<!-- Main paragraph -->
+      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa esse dolorem voluptatibus praesentium, temporibus quam vel.</p>
+    </section>
+<!-- Projects section -->
+    <section id="projects" class="projects-section">
+<!-- Projects section header -->
+      <h2 class="projects-section-header">These are some of my projects</h2>
+<!-- Grid container for projects -->
+      <div class="projects-grid">
+<!-- Individual project tiles -->
+        <div class="project-tile">
+          <a href="https://caiomanique.github.io/camera-product-landing-page/" target="_blank" class="project-link">
+<!-- Inner container for project -->
+            <div class="project-tile-inner">
+<!-- Project image -->
+              <img class="project-image" src="assets/camera-product-landing-page.png" alt="project">
+<!-- Project content -->
+              <div class="project-content flow">
+<!-- Project title -->
+                <h3 class="project-title">
+                  Product Landing Page
+                </h3>
+<!-- Project description -->
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, beatae.
                 </p>
-              </a>
-              <a href="https://caiomanique.github.io/tabletop-fantasy-rpg-survey/" target="_blank" class="project project-tile">
-                <img class="project-image" src="assets/tabletop-fantasy-rpg-survey.png" alt="project">
-                <p class="project-title">
-                  Tabletop Fantasy RPG Survey
-                </p>
-              </a>
-              <a href="https://caiomanique.github.io/javascript-documentation-reference/" target="_blank" class="project project-tile">
-                <img class="project-image" src="assets/javascript-documentation-reference.png" alt="project">
-                <p class="project-title">
-                  Javascript Documentation Reference
-                </p>
-              </a>
-              <a href="https://caiomanique.github.io/healthy-gamer-tribute-page/" target="_blank" class="project project-tile">
-                <img class="project-image" src="assets/healthy-gamer-tribute-page.png" alt="project">
-                <p class="project-title">
-                  Healthy Gamer Tribute Page
-                </p>
-              </a>
+              </div>
             </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <div class="contact-section-header">
-              <h2>Lorem, ipsum dolor.</h2>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://caiomanique.github.io/tabletop-fantasy-rpg-survey/" target="_blank" class="project-link">
+<!-- Inner container for project -->
+            <div class="project-tile-inner">
+              <img class="project-image" src="assets/tabletop-fantasy-rpg-survey.png" alt="project">
+<!-- Project content -->
+              <div class="project-content flow">
+                <h3 class="project-title">
+                  Tabletop Fantasy RPG Survey            
+                </h3>
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, beatae.         
+                </p>       
+              </div>
             </div>
-            <div class="contact-links">
-              <a href="" target="_blank" class="fa fa-linkedin"></a>
-              <a id="profile-link" href="" target="_blank" class="fa fa-github"></a>
-              <a href="" target="_blank" class="fa fa-instagram"></a>
-              <a href="mailto:example@example.com" class="fa fa-at"></a>
+          </a>                
+        </div>
+        <div class="project-tile">
+          <a href="https://caiomanique.github.io/javascript-documentation-reference/" target="_blank" class="project-link">
+            <div class="project-tile-inner">
+              <img class="project-image" src="assets/javascript-documentation-reference.png" alt="project">
+              <div class="project-content flow">
+                <h3 class="project-title">
+                  JS Documentation Reference            
+                </h3>
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, beatae.         
+                </p>            
+              </div>
             </div>
-        </section>
-    </main>    
-    <footer>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-    </footer>
+          </a>                
+        </div>
+        <div class="project-tile">
+          <a href="https://caiomanique.github.io/healthy-gamer-tribute-page/" target="_blank" class="project-link">
+            <div class="project-tile-inner">
+              <img class="project-image" src="assets/healthy-gamer-tribute-page.png" alt="project">
+              <div class="project-content flow">
+                <h3 class="project-title">
+                  Healthy Gamer Tribute Page            
+                </h3>
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, beatae.         
+                </p>
+              </div>
+            </div>
+          </a>                
+        </div> 
+      </div>
+    </section>
+<!-- Contact section -->
+    <section id="contact" class="contact-section">
+<!-- Contact section header -->
+      <div class="contact-section-header  flow">
+<!-- Contact section heading -->
+        <h2>Lorem, ipsum dolor.</h2>
+<!-- Contact section paragraph -->
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+<!-- Contact links -->
+      <div class="contact-links">
+<!-- Link to LinkedIn -->
+        <a href="" target="_blank" class="fa fa-linkedin"></a>
+<!-- Link to GitHub -->
+        <a id="profile-link" href="" target="_blank" class="fa fa-github"></a>
+<!-- Link to Instagram -->
+        <a href="" target="_blank" class="fa fa-instagram"></a>
+<!-- Email link -->
+        <a href="mailto:example@example.com" class="fa fa-at"></a>
+      </div>
+    </section>
+  </main>
+<!-- Footer section -->
+  <footer>
+<!-- Footer text -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  </footer>
 </body>
 </html>
