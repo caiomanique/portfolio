@@ -1,19 +1,26 @@
-*,
-::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Reset and Global Styles */
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-:root{
-    --primary-color:#10162f;
-    --secondary-color:#486989;
-    --accent-color:#FDB15D;
-    --text-color:#F1F1E6;
+/* Define color variables */
+:root {
+    --primary-color: #0c192d;    /* Dark blue (main background) */
+    --secondary-color: #517392;   /* Blue-gray (section backgrounds, borders) */
+    --accent-color: #FFB678;      /* Pastel orange (highlighted elements, buttons) */
+    --text-color: #F1F1E6;        /* Light grayish-white (text, icons) */
+
+    /* Additional colors */
+    --dark-purple: #573280;       /* Dark purple (alternative background, headers) */
+    --dark-green: #195e4d;        /* Dark green (accents, buttons, links) */
+    --dark-red: #802626;          /* Dark red (errors, warnings, alerts) */
+    --dark-yellow: #806c26;       /* Dark yellow (call-to-action, notifications) */
 }
 
-html{
+/* General styling for the HTML document */
+html {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -22,18 +29,17 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--primary-color);
 }
 
-p{
-    font-family: "Cantarell", sans-serif;
-    font-weight: 400;
-    text-align: justify;
-    margin: 1% 0;
+/* Styling for text */
+.flow > * + *{
+    margin-top: 1em;
 }
 
-a{
+/* Styling for hyperlinks */
+a {
     text-decoration: none;
     font-family: "Source Code Pro", monospace;
     font-style: normal;
@@ -43,58 +49,188 @@ a{
 a:visited {
     text-decoration: none;
 }
-  
+
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:active {
     text-decoration: none;
 }
 
-nav{
+/* Navigation */
+nav {
     padding: 20px 0;
-    border-bottom: var(--accent-color) solid 1px;
 }
 
-nav ul{
-    list-style-type:none;
+nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 0;
+    border-bottom: var(--accent-color) solid 1px;
 }
 
-.nav-list li{
+.nav-list li {
     border: var(--accent-color) solid 1px;
     padding: 0 10px;
 }
 
-main{
+nav ul li a {
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
     margin: auto;
     max-width: 90%;
 }
 
-.welcome-section{
-    background-color: green;
+.welcome-section {
     min-height: 80vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    flex-direction: column;
 }
 
-.projects-grid{
+.welcome-section h1 {
+    display: inline-block;
+    margin-right: auto;
+    font-size: 4rem;
+}
+
+.welcome-section p {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    width: 40%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 2rem;
+}
+
+/* Projects Section */
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3em;
-    background-color: greenyellow;
+    padding: 20px;
+    position: relative;
 }
 
-.project-image{
-    aspect-ratio: 16/9;
-    max-width: 400px;
-    object-fit:fill;
+/* Individual project tiles */
+.project-tile {
+    position: relative;
 }
 
+.project-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    color: var(--color-text);
+    background-color: pink;
+}
+
+.project-tile-inner {
+    position: relative;
+    z-index: 1;
+    display: block;
+    background-color: var(--primary-color);
+    border: 2px solid var(--text-color);
+    padding: 5%;
+    min-height: auto;
+    transition: transform 400ms ease;
+}
+
+.project-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.project-tile:hover::before {
+    transform: translate(-5%, 5%);
+}
+
+.project-tile:hover .project-tile-inner {
+    transform: translate(5%, -5%);
+}
+
+.project-image {
+    aspect-ratio: 4/3;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 2px solid var(--text-color);
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project-title {
+    margin-top: 1.5em;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.project-description{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    font-size: 30px;
+    padding: 30px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.contact-links a:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color);
+    padding: 20px;
+}
+
+/* Font Awesome Icons */
 .fa {
     padding: 20px;
     font-size: 30px;
