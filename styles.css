@@ -1,0 +1,283 @@
+/* Reset and Global Styles */
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define color variables */
+:root {
+    --primary-color: #0c192d;    /* Dark blue (main background) */
+    --secondary-color: #517392;   /* Blue-gray (section backgrounds, borders) */
+    --accent-color: #FFB678;      /* Pastel orange (highlighted elements, buttons) */
+    --text-color: #F1F1E6;        /* Light grayish-white (text, icons) */
+}
+
+/* General styling for the HTML document */
+html {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/* Styling for text */
+.flow > * + *{
+    margin-top: 1em;
+}
+
+/* Styling for hyperlinks */
+a {
+    text-decoration: none;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    padding: 1em 2em;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.welcome-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+    flex-direction: column;
+    background-color: var(--text-color);
+    box-shadow: 
+        inset 0px 11px 8px -10px var(--primary-color),
+        inset 0px -11px 8px -10px var(--primary-color);
+}
+
+.welcome-section h1 {
+    display: inline-block;
+    margin-right: auto;
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.welcome-section p {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+    width: 40%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Projects Section */
+
+.projects-section{
+    margin: auto;
+    max-width: 90%;
+}
+
+.projects-section-header{
+    margin-top: 1.5em;
+    text-align: center;
+    font-size: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    position: relative;
+    justify-items: center;
+}
+
+
+/* Individual project tiles */
+.project-tile {
+    position: relative;
+}
+
+.project-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    color: var(--color-text);
+    background-color: var(--secondary-color);
+}
+
+.project-tile-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    height: 100%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--text-color);
+    transition: transform 400ms ease;
+}
+
+.project-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    z-index: -1;
+    transition: transform 400ms ease-in-out;
+}
+
+.project-tile:hover::before {
+    transform: translate(-2%, 2%);
+}
+
+.project-tile:hover .project-tile-inner {
+    transform: translate(2%, -2%);
+}
+
+.project-image {
+    aspect-ratio: 4/3;
+    height: 80%;
+    width: 100%;
+    overflow: clip;
+    object-fit: cover;
+    display: block;
+    padding: 5% 5% 0 5%;
+}
+
+.project-content{
+    margin: 5%;
+}
+
+.project-title {
+    margin-top: 1.5em;
+    font-size: 100%;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.project-description{
+    text-align: justify;
+    text-justify: auto;
+}
+
+/* Contact Section */
+
+.contact-section{
+    min-height: 200px;
+    margin: auto;
+    padding-top: 10em;
+    max-width: 90%;
+}
+
+.contact-section-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section-header h2{
+    font-size: 60px;
+}
+
+.contact-section-header p{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-links a {
+    font-size: 40px;
+    padding: 30px;
+}
+
+.contact-links a:hover {
+    animation: 2s bounce ease-out;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 12px;
+    opacity: 0.75;
+    text-align: center;
+}
+
+/* Font Awesome Icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Keyframes */
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-20px);} 
+    60% {transform: translateY(-10px);} 
+ } 
